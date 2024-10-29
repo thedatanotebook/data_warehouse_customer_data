@@ -1,0 +1,9 @@
+production ready.txt
+test.txt
+upload.txt
+Process/
+docker-compose.yml
+
+google_sheets_to_s3/includes/encrypted_credntials.txt
+
+google_sheets_to_s3/scripts/config.py

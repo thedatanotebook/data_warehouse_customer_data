@@ -1,0 +1,91 @@
+Flexibility and trade off. Those are important in Data Architecture
+
+DA - Process, Strategy, Change Management, Evaluating Trade Offs. / Design of systems to support the evolving data needs of an enterprise, achieved through evaluation of trade offs.
+
+Operation Architecture 
+1. We have order data that we want to view in a dashboard. 
+2. Data has stars and reviews of those stars. for Marketing Team.
+3. Two tables: Orders Table and Reviews table. 
+4. We can use a batch process. 
+
+
+Technical Architecture 
+1. Needs to have Flexibility and Maintainability. Staff can maintain after final delivery.
+
+Multiple domains: Sales - Orders; Accounting - Cogs; Marketing - Reviews;
+
+Main goal is Analytics.
+
+Two Domains -> Sales Evaluation and -> Marketing Evaluation
+
+-------------------
+
+
+
+PostgresQL -> S3 -> Data Quality Check -> Transformation -> S3 
+
+Project Title: E-Commerce Sales Data Warehouse
+Project Objective:
+
+Design and implement a data warehouse to facilitate advanced analytics and reporting for an e-commerce business. 
+    The data warehouse will consolidate data from various sources to provide insights into sales performance, customer behavior, 
+    product trends, and inventory management.
+Scope of Work:
+
+    Data Sources:
+        Google Sheets;
+
+    Data Warehouse Design: See Schema
+
+    ETL Process:
+        Extract: Develop an extraction strategy to pull data from the various source systems at scheduled intervals (e.g., nightly).
+        Transform: Define transformation rules to clean, aggregate, and calculate derived metrics, ensuring data quality and consistency.
+        Load: Implement a loading strategy to populate the fact and dimension tables within the data warehouse.
+
+    Reporting and Analytics:
+        Design and implement dashboards and reports to support key business questions, such as:
+            What are the top-selling products by month? - Recommendation - What are the worst selling products too?
+            How does customer demographics affect purchasing behavior?
+            What is the average order value, and how has it changed over time?
+            Analyze shipping performance: delivery times and costs associated with different shipping methods.
+            How are customers reacting to the deliveries? What can we do better next time?
+
+    Technologies to Use:
+        Database: Choose a suitable database platform (e.g., Amazon Redshift, Google BigQuery, Snowflake, or on-premises solutions).
+        ETL Tools: Consider tools like Apache NiFi, Talend, or Microsoft SQL Server Integration Services (SSIS) for the ETL process.
+        BI Tools: Use BI tools like Tableau, Power BI, or Looker for data visualization and reporting.
+
+Project Timeline:
+
+    Phase 1: Requirements gathering and data source identification (2 weeks)
+    Phase 2: Data warehouse design (schema design and ETL process definition) (3 weeks)
+    Phase 3: Development and implementation of ETL processes (4 weeks)
+    Phase 4: Data loading and testing (2 weeks)
+    Phase 5: Report and dashboard development (3 weeks)
+    Phase 6: Final testing, deployment, and user training (2 weeks)
+
+Expected Outcomes:
+
+    A fully functional data warehouse that integrates multiple data sources for comprehensive sales analysis.
+    A suite of dashboards and reports that provide actionable insights to drive business decisions.
+    Enhanced data-driven decision-making capabilities across the organization.
+
+Additional Considerations:
+
+    Data Governance: Establish protocols for data quality, security, and compliance throughout the project.
+    User Training: Plan for training sessions to help end-users effectively utilize the reporting tools.
+    Maintenance Plan: Outline a strategy for ongoing maintenance and updates to the data warehouse as business needs evolve.
+
+
+
+google-sheets- aws_datalake (for scale) - dbtLabs - snowflake - Power BI 
+
+Data Warehouse Project (Only)
+
+
+
+Data Model Considerations:
+1. We are looking at mostly read heavy; simpler reports; 
+    We don't expect dimensions to change -> Star Schema
+
+
